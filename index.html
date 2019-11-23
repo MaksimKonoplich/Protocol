@@ -2,9 +2,152 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Scoliosis Protocol</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 </head>
 <body>
-	
+	<header>
+		<p>Labrecque Family Chiropractic, PC</p>
+		<p class="protocol">Scoliosis Protocol</p>
+		<div class="form-check form-check-inline">
+				<label class="form-check-label" for="inlineCheckbox1" style="width: 175px;">PATIENT NAME:</label>
+				<input class="form-control form-check-inline" type="text" placeholder="">
+		</div>
+		<div class="form-check form-check-inline">
+				<label class="form-check-label" for="inlineCheckbox1">DOB:</label>
+				<input class="form-control form-check-inline" type="text" placeholder="">
+		</div>
+	</header>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col" class="date">Date</th>
+				<th scope="col" class="init"><p>Initials</p></th>
+				<th scope="col" class="total-t"><p>Table<br>Total Min</p></th>
+				<th scope="col" class="chair-t"><p>Chair<br>Total Min</p></th>
+				<th scope="col" class="note"><p>Notes (Indicate how patient tolerated treatment)</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="fo">
+				<td class="blank">
+					<input type="text" class="form-control datetimepicker-input picker">
+				</td>
+				<td class="blank">
+					<input class="form-control" type="text" placeholder="">
+				</td>
+				<td class="blank">
+					<input class="form-control" type="text" placeholder="">
+				</td>
+				<td class="blank">
+					<input class="form-control" type="text" placeholder="">
+				</td>
+				<td>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Pt. tolerated treatment well
+					</div>
+					<form class="form-inline">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="agree" onclick="agreeForm(this.form)">Pt. c/o after use of
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option2">Scoliosis Table
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option3">Chair
+						</div>
+						<input class="form-control" type="text" placeholder="" name="submit" disabled>
+					</form>
+					<form class="form-inline">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" name="agree" onclick="agreeForm(this.form)">
+							<label class="form-check-label" for="defaultCheck2">
+								Stopped treatment prematurely due to
+							</label>
+						</div>
+						<input class="form-control" type="text" placeholder="" name="submit" disabled>	
+					</form>
+				</td>
+			</tr>
+			<tr class="fo">
+				<td class="blank">
+					<input type="text" class="form-control datetimepicker-input picker">
+				</td>
+				<td class="blank">
+					<input class="form-control" type="text" placeholder="">
+				</td>
+				<td class="blank">
+					<input class="form-control" type="text" placeholder="">
+				</td>
+				<td class="blank">
+					<input class="form-control" type="text" placeholder="">
+				</td>
+				<td class="check">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Pt. tolerated treatment well
+					</div>
+					<form class="form-inline">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="agree" onclick="agreeForm(this.form)">Pt. c/o after use of
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option2">Scoliosis Table
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option3">Chair
+						</div>
+						<input class="form-control" type="text" placeholder="" name="submit" disabled>
+					</form>
+					<form class="form-inline">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" name="agree" onclick="agreeForm(this.form)">
+							<label class="form-check-label" for="defaultCheck2">
+								Stopped treatment prematurely due to
+							</label>
+						</div>
+						<input class="form-control" type="text" placeholder="" name="submit" disabled>	
+					</form>				
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<section id="second" class="section">
+			<div class="container">
+				<input type="checkbox" name="group2" id="checkbox-1">
+				<label for="checkbox-1"><span class="checkbox">Апельсины</span></label>
+			</div>
+			<div class="container">
+				<input type="checkbox" name="group2" id="checkbox-2">
+				<label for="checkbox-2"><span class="checkbox">Яблоки</span></label>
+			</div>
+			<div class="container">
+				<input type="checkbox" name="group2" id="checkbox-3">
+				<label for="checkbox-3"><span class="checkbox">Авокадо</span></label>
+			</div>
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+	<script>
+		$('.picker').datetimepicker({
+			timepicker: false,
+			datepicker: true,
+			format: 'Y-m-d',
+			value: 'moment'
+		})
+
+		function agreeForm(f) {
+    if (f.agree.checked) f.submit.disabled = 0 
+    else f.submit.disabled = 1
+   }
+	</script>
 </body>
 </html>
