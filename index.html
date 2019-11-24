@@ -21,7 +21,7 @@
 				<input class="form-control form-check-inline" type="text" placeholder="">
 		</div>
 	</header>
-	<table>
+	<table id="tabl">
 		<thead>
 			<tr>
 				<th scope="col" class="date">Date</th>
@@ -132,38 +132,15 @@
 	</section>
 
 	Ваш email: <input type="email" id="input">
-
 	<div id="error"></div>
+
+	<input type='button' value='Ещё'>
+
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
-	<script>
-		$('.picker').datetimepicker({
-			timepicker: false,
-			datepicker: true,
-			format: 'Y-m-d',
-			value: 'moment'
-		})
-
-		function agreeForm(f) {
-    if (f.agree.checked) f.submit.disabled = 0 
-    else f.submit.disabled = 1
-   }
-
-		input.onblur = function() {
-  		if (isNaN(input.value) || input.value < 0 || input.value > 100) {
-    	input.classList.add('invalid');
-  		}
-		};
-
-		input.onfocus = function() {
-  		if (this.classList.contains('invalid')) {
-    	this.classList.remove('invalid');
-    	error.innerHTML = "";
-  		}
-		};
-	</script>
+	<script src="script.js"></script>
 </body>
 </html>
