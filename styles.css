@@ -34,6 +34,7 @@ header .protocol {
 	padding: 0px !important;
 	vertical-align: middle !important;
 }
+
 td {
 	border: 1px solid black;
 }
@@ -91,6 +92,14 @@ table tr:nth-child(2n) td {
 .blank:first-child input{
 	width: 90px;
 	text-align: center;
+}
+
+#clear1 {
+	border-right: none;
+}
+
+#clear2 {
+	border-left: none;
 }
 
 /* INPUTS */

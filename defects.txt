@@ -1,0 +1,54 @@
+HTML:
+<section id="second" class="section">
+	<div class="container">
+		<input type="checkbox" name="group2" id="checkbox-1">
+		<label for="checkbox-1"><span class="checkbox">1</span></label>
+	</div>
+	<div class="container">
+		<input type="checkbox" name="group2" id="checkbox-2">
+		<label for="checkbox-2"><span class="checkbox">2</span></label>
+	</div>
+	<div class="container">
+		<input type="checkbox" name="group2" id="checkbox-3">
+		<label for="checkbox-3"><span class="checkbox">3</span></label>
+	</div>
+</section>
+
+CSS:
+.section input[type="checkbox"]{
+  display: none;
+}
+
+.container label {
+  position: relative;
+}
+
+.container span::before,
+.container span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.container span.checkbox::before {
+  width: 17px;
+  height: 17px;
+  background-color: #F1F4FF;
+  left: -35px;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+	transition: border-color .2s;
+	border: 2px solid #565964;
+}
+
+input[type="checkbox"]:checked + label span.checkbox::after {
+	width: 15px;
+	height: 15px;
+	background-image: url(assets/x.png);
+  left: -33px;
+	top: 0px;
+	outline: 3px dotted black;
+	border: 0px;
+}
