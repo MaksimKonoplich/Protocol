@@ -21,7 +21,7 @@ numbers.forEach(function(input) {
 	input.onblur = function(event) {
 		if (isNaN(input.value) || input.value < 0 || input.value > 100) {
 		input.classList.add('invalid');
-		input.value = 0;
+		input.value = '';
 		event.stopImmediatePropagation();
 		}
 	};
@@ -78,7 +78,7 @@ but.onclick = function() {
 	inputAverage1.onblur = function (event) { 
 		if (isNaN(inputAverage1.value) || inputAverage1.value < 0 || inputAverage1.value > 100) { 
 			inputAverage1.classList.add('invalid'); 
-			inputAverage1.value = 0; 
+			inputAverage1.value = ''; 
 			event.stopImmediatePropagation(); 
 		} 
 	}; 
@@ -110,7 +110,7 @@ but.onclick = function() {
 	inputAverage2.onblur = function(event) { 
 		if (isNaN(inputAverage2.value) || inputAverage2.value < 0 || inputAverage2.value > 100) { 
 			inputAverage2.classList.add('invalid'); 
-			inputAverage2.value = 0; 
+			inputAverage2.value = ''; 
 			event.stopImmediatePropagation(); 
 		} 
 	}; 
@@ -122,42 +122,43 @@ but.onclick = function() {
 	}; 
 
 	d1.insertAdjacentHTML('beforebegin', `<tr class="fo">
-	<td class="blank blank1">
-	</td>
-	<td class="blank">
+	<td class="blank blank1"></td>
+	<td class="simple-cell">
 		<input class="form-control" type="text">
 	</td>
-	<td class="blank blank3">
-	</td>
-	<td class="blank blank4">
-	</td>
-	<td class="check">
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Pt. tolerated treatment well
-		</div>
-		<form class="form-inline">
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="agree" onclick="agreeForm(this.form)">Pt. c/o after use of
-			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option2">Scoliosis Table
-			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option3">Chair
-			</div>
-			<input class="form-control" type="text" name="submit" disabled>
-		</form>
-		<form class="form-inline">
+	<td class="blank blank3"></td>
+	<td class="blank blank4"></td>
+	<td class="full-cell">
+		<div class="full">
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" name="agree" onclick="agreeForm(this.form)">
-				<label class="form-check-label" for="defaultCheck2">
-					Stopped treatment prematurely due to
-				</label>
+				<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">Pt. tolerated treatment well
 			</div>
-			<input class="form-control" type="text" name="submit" disabled>	
-		</form>				
+			<form class="form-inline">
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="agree" onclick="agreeForm(this.form)">Pt. c/o after use of
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option2">Scoliosis Table
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option3">Chair
+				</div>
+				<input class="form-control small-input" type="text" name="submit" disabled>
+			</form>
+			<form class="form-inline">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" name="agree" onclick="agreeForm(this.form)">
+					<label class="form-check-label" for="defaultCheck2">
+						Stopped treatment prematurely due to
+					</label>
+				</div>
+				<input class="form-control small-input" type="text" name="submit" disabled>	
+		</form>
+		</div>
 	</td>
-	</tr>`);
+</tr>`);
+
+
 
 	var blank1 = Array.from(document.querySelectorAll('.blank1')); 
 	blank1[blank1.length - 1].appendChild(inputDate) 
