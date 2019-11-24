@@ -193,7 +193,7 @@ matches2.forEach(function(mean) {
 var btn = $('#button');
 
 $(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
+  if ($(window).scrollTop() > 0) {
     btn.addClass('show');
   } else {
     btn.removeClass('show');
@@ -202,5 +202,5 @@ $(window).scroll(function() {
 
 btn.on('click', function(e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $('html, body').animate({scrollTop:0}, '0');
 });
