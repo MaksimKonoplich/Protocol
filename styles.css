@@ -212,3 +212,44 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 	outline: 3px dotted black;
 	border: 0px;
 }
+
+
+
+
+/* SCROLL */
+#button {
+  display: inline-block;
+  background-color: #cacaca;
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#button::after {
+	content: "^";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #565964;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
