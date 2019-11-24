@@ -14,11 +14,11 @@
 		<p class="protocol">Scoliosis Protocol</p>
 		<div class="form-check form-check-inline">
 				<label class="form-check-label" for="inlineCheckbox1" style="width: 175px;">PATIENT NAME:</label>
-				<input class="form-control form-check-inline" type="text" placeholder="">
+				<input class="form-control form-check-inline" type="text">
 		</div>
 		<div class="form-check form-check-inline">
 				<label class="form-check-label" for="inlineCheckbox1">DOB:</label>
-				<input class="form-control form-check-inline" type="text" placeholder="">
+				<input class="form-control form-check-inline" type="text">
 		</div>
 	</header>
 	<table id="tabl">
@@ -37,13 +37,13 @@
 					<input type="text" class="form-control datetimepicker-input picker">
 				</td>
 				<td class="blank">
-					<input class="form-control" type="text" placeholder="">
+					<input class="form-control" type="text">
 				</td>
 				<td class="blank">
-					<input class="form-control" type="text" placeholder="">
+					<input class="form-control average1 num" type="text">
 				</td>
 				<td class="blank">
-					<input class="form-control" type="text" placeholder="">
+					<input class="form-control average2 num" type="text">
 				</td>
 				<td>
 					<div class="form-check">
@@ -59,7 +59,7 @@
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option3">Chair
 						</div>
-						<input class="form-control" type="text" placeholder="" name="submit" disabled>
+						<input class="form-control" type="text" name="submit" disabled>
 					</form>
 					<form class="form-inline">
 						<div class="form-check">
@@ -68,7 +68,7 @@
 								Stopped treatment prematurely due to
 							</label>
 						</div>
-						<input class="form-control" type="text" placeholder="" name="submit" disabled>	
+						<input class="form-control" type="text" name="submit" disabled>	
 					</form>
 				</td>
 			</tr>
@@ -77,13 +77,13 @@
 					<input type="text" class="form-control datetimepicker-input picker">
 				</td>
 				<td class="blank">
-					<input class="form-control" type="text" placeholder="">
+					<input class="form-control" type="text">
 				</td>
 				<td class="blank">
-					<input class="form-control" type="text" placeholder="">
+					<input class="form-control average1 num" type="text">
 				</td>
 				<td class="blank">
-					<input class="form-control" type="text" placeholder="">
+					<input class="form-control average2 num" type="text">
 				</td>
 				<td class="check">
 					<div class="form-check">
@@ -99,7 +99,7 @@
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioOptions" value="option3">Chair
 						</div>
-						<input class="form-control" type="text" placeholder="" name="submit" disabled>
+						<input class="form-control" type="text" name="submit" disabled>
 					</form>
 					<form class="form-inline">
 						<div class="form-check">
@@ -108,9 +108,23 @@
 								Stopped treatment prematurely due to
 							</label>
 						</div>
-						<input class="form-control" type="text" placeholder="" name="submit" disabled>	
+						<input class="form-control" type="text" name="submit" disabled>	
 					</form>				
 				</td>
+			</tr>
+			<tr class="fo">
+				<td></td>
+				<td></td>
+				<td>
+					<p id="total1"></p>
+				</td>
+				<td>
+					<p id="total2"></p>
+				</td>
+				<td>
+					
+				</td>				
+			
 			</tr>
 		</tbody>
 	</table>
@@ -130,9 +144,6 @@
 				<label for="checkbox-3"><span class="checkbox">Авокадо</span></label>
 			</div>
 	</section>
-
-	Ваш email: <input type="email" id="input">
-	<div id="error"></div>
 
 	<input type='button' value='Ещё'>
 

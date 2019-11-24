@@ -117,7 +117,9 @@ table tr:nth-child(2n) td {
 } */
 
 /* Фичи */
-.invalid { border-color: red; }
+input[type="text"].invalid {
+	border: 3px solid red;
+}
 
 
 
